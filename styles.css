@@ -1,0 +1,201 @@
+/* ==========================================================================
+   HyperForge - Main Stylesheet
+   Author: Joett Ocasio | CIS 300 Project
+   ========================================================================== */
+
+/* Global color variables exported from realtimecolors.com */
+:root {
+    --text: #161311;
+    --background: #f8f5f0;
+    --primary: #c5621e;
+    --secondary: #e8c8a0;
+    --accent: #d87a2c;
+    --muted: #6b5d52;
+    --card-bg: #ffffff;
+    --border: #e0d5c7;
+    --heading-font: 'Georgia', 'Times New Roman', serif;
+    --body-font: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Base reset and body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Header and branding */
+header {
+    background-color: var(--text);
+    color: var(--background);
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--primary);
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    font-size: 14px;
+    color: var(--secondary);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--secondary);
+    padding: 56px 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 48px;
+    border-left: 6px solid var(--primary);
+}
+
+.hero h2 {
+    font-family: var(--heading-font);
+    font-size: 42px;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.hero .lead {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 28px auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent);
+}
+
+/* Section styling */
+section {
+    margin-bottom: 48px;
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+
+section p {
+    margin-bottom: 14px;
+    color: var(--text);
+}
+
+/* Feature grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 28px 24px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text);
+    color: var(--background);
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: 40px;
+    border-top: 4px solid var(--primary);
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
