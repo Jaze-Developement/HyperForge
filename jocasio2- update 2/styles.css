@@ -1,0 +1,537 @@
+/* ==========================================================================
+   HyperForge - Main Stylesheet
+   Author: Joett Ocasio | CIS 300 Project
+   ========================================================================== */
+
+/* Global color variables exported from realtimecolors.com */
+:root {
+    --text: #161311;
+    --background: #f8f5f0;
+    --primary: #c5621e;
+    --secondary: #e8c8a0;
+    --accent: #d87a2c;
+    --muted: #6b5d52;
+    --card-bg: #ffffff;
+    --border: #e0d5c7;
+    --heading-font: 'Georgia', 'Times New Roman', serif;
+    --body-font: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Base reset and body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Header and branding */
+header {
+    background-color: var(--text);
+    color: var(--background);
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--primary);
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.logo .tagline {
+    font-size: 14px;
+    color: var(--secondary);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--secondary);
+    padding: 56px 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 48px;
+    border-left: 6px solid var(--primary);
+}
+
+.hero h2 {
+    font-family: var(--heading-font);
+    font-size: 42px;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.hero .lead {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 28px auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent);
+}
+
+/* ==========================================================================
+   Figures and embedded images (used on every content page)
+   ========================================================================== */
+.hero-figure {
+    margin: 0 0 48px 0;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+    border: 1px solid var(--border);
+}
+
+.hero-figure figcaption,
+.contact-figure figcaption {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content-figure {
+    margin: 24px auto;
+    text-align: center;
+    max-width: 760px;
+}
+
+.content-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 8px;
+}
+
+.content-figure figcaption {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.5;
+    padding: 4px 16px 0;
+}
+
+.contact-figure {
+    margin: 0 0 32px 0;
+    text-align: center;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Section styling */
+section {
+    margin-bottom: 48px;
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+
+section p {
+    margin-bottom: 14px;
+    color: var(--text);
+}
+
+/* Feature grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 28px 24px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text);
+    color: var(--background);
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: 40px;
+    border-top: 4px solid var(--primary);
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Page intro block (used on content pages)
+   ========================================================================== */
+.page-intro {
+    background-color: var(--secondary);
+    border-left: 6px solid var(--primary);
+    padding: 36px 32px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.page-intro h2 {
+    font-size: 36px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 12px;
+}
+
+.page-intro .lead {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 760px;
+}
+
+/* ==========================================================================
+   Bullet list (used inside content sections)
+   ========================================================================== */
+.bullet-list {
+    list-style: none;
+    margin: 12px 0 18px 0;
+    padding-left: 0;
+}
+
+.bullet-list li {
+    position: relative;
+    padding: 6px 0 6px 22px;
+    color: var(--text);
+    border-bottom: 1px dashed var(--border);
+}
+
+.bullet-list li:last-child {
+    border-bottom: none;
+}
+
+.bullet-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* In-content links */
+section p a,
+section li a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+section p a:hover,
+section li a:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Tables (Exercise Selection page)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table caption {
+    caption-side: top;
+    text-align: left;
+    font-family: var(--heading-font);
+    font-style: italic;
+    color: var(--muted);
+    padding: 0 0 10px 0;
+    font-size: 15px;
+}
+
+thead {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+th {
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--background);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.caption-note {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   Video block (Programming page)
+   ========================================================================== */
+video {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto 8px auto;
+    border-radius: 6px;
+    background-color: var(--text);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   Forms (Contact page)
+   ========================================================================== */
+.contact-form {
+    background-color: var(--card-bg);
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 720px;
+    margin-top: 16px;
+}
+
+.form-row {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 15px;
+    background-color: var(--background);
+    color: var(--text);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--card-bg);
+}
+
+.form-row textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-actions {
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.contact-form .cta-button {
+    border: none;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: 15px;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary);
+    padding: 14px 28px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+/* ==========================================================================
+   Responsive (mobile breakpoint)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 14px;
+        width: 100%;
+    }
+
+    main {
+        padding: 28px 18px;
+    }
+
+    .hero h2,
+    .page-intro h2 {
+        font-size: 28px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px 8px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .secondary-button,
+    .contact-form .cta-button {
+        width: 100%;
+    }
+}
+

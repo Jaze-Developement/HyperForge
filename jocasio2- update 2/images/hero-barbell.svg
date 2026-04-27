@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Loaded barbell illustration</title>
+  <desc id="hero-desc">A stylized illustration of a barbell loaded with weight plates, in HyperForge's warm orange and cream color palette.</desc>
+
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f8f5f0"/>
+      <stop offset="100%" stop-color="#e8c8a0"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#d87a2c"/>
+      <stop offset="100%" stop-color="#c5621e"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3a3a3a"/>
+      <stop offset="50%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Subtle horizon line -->
+  <line x1="0" y1="260" x2="800" y2="260"
+        stroke="#c5621e" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="3,6"/>
+
+  <!-- ================= BARBELL ================= -->
+  <!-- Bar (the long horizontal cylinder) -->
+  <rect x="80" y="172" width="640" height="14" rx="3"
+        fill="url(#barGrad)" stroke="#161311" stroke-width="1.5"/>
+
+  <!-- Knurling marks on the bar -->
+  <g stroke="#5a5a5a" stroke-width="0.7" stroke-opacity="0.6">
+    <line x1="320" y1="174" x2="320" y2="184"/>
+    <line x1="330" y1="174" x2="330" y2="184"/>
+    <line x1="340" y1="174" x2="340" y2="184"/>
+    <line x1="460" y1="174" x2="460" y2="184"/>
+    <line x1="470" y1="174" x2="470" y2="184"/>
+    <line x1="480" y1="174" x2="480" y2="184"/>
+  </g>
+
+  <!-- Inner sleeve collars (where plates butt against) -->
+  <rect x="195" y="167" width="8" height="24" fill="#161311"/>
+  <rect x="597" y="167" width="8" height="24" fill="#161311"/>
+
+  <!-- ================= LEFT-SIDE PLATES ================= -->
+  <!-- Larger 45-lb plate on the inside -->
+  <ellipse cx="170" cy="179" rx="14" ry="78"
+           fill="url(#plateGrad)" stroke="#161311" stroke-width="2"/>
+  <ellipse cx="170" cy="179" rx="6" ry="32"
+           fill="#161311" opacity="0.18"/>
+  <text x="170" y="183" text-anchor="middle"
+        font-family="Georgia,serif" font-size="11" font-weight="bold"
+        fill="#f8f5f0">45</text>
+
+  <!-- Smaller 25-lb plate outside -->
+  <ellipse cx="142" cy="179" rx="11" ry="52"
+           fill="#e8c8a0" stroke="#161311" stroke-width="1.6"/>
+  <text x="142" y="183" text-anchor="middle"
+        font-family="Georgia,serif" font-size="10" font-weight="bold"
+        fill="#161311">25</text>
+
+  <!-- Outermost collar / clip -->
+  <rect x="125" y="171" width="6" height="16" fill="#161311"/>
+
+  <!-- ================= RIGHT-SIDE PLATES (mirror) ================= -->
+  <ellipse cx="630" cy="179" rx="14" ry="78"
+           fill="url(#plateGrad)" stroke="#161311" stroke-width="2"/>
+  <ellipse cx="630" cy="179" rx="6" ry="32"
+           fill="#161311" opacity="0.18"/>
+  <text x="630" y="183" text-anchor="middle"
+        font-family="Georgia,serif" font-size="11" font-weight="bold"
+        fill="#f8f5f0">45</text>
+
+  <ellipse cx="658" cy="179" rx="11" ry="52"
+           fill="#e8c8a0" stroke="#161311" stroke-width="1.6"/>
+  <text x="658" y="183" text-anchor="middle"
+        font-family="Georgia,serif" font-size="10" font-weight="bold"
+        fill="#161311">25</text>
+
+  <rect x="669" y="171" width="6" height="16" fill="#161311"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="266" rx="280" ry="6"
+           fill="#161311" opacity="0.10"/>
+
+  <!-- Subtle motion / tagline marks above the bar -->
+  <g fill="#c5621e" opacity="0.7">
+    <circle cx="120" cy="100" r="3"/>
+    <circle cx="160" cy="80" r="2"/>
+    <circle cx="640" cy="90" r="2.5"/>
+    <circle cx="690" cy="110" r="3"/>
+  </g>
+
+  <!-- Small caption inside the illustration -->
+  <text x="400" y="320" text-anchor="middle"
+        font-family="Georgia,serif" font-size="14" font-style="italic"
+        fill="#6b5d52">Strength is built one rep, one set, one session at a time.</text>
+</svg>
