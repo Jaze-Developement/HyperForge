@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="contact-title">
+  <title id="contact-title">A paper plane representing sending a message</title>
+
+  <defs>
+    <linearGradient id="bgC" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8f5f0"/>
+      <stop offset="100%" stop-color="#e8c8a0"/>
+    </linearGradient>
+    <linearGradient id="planeG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#d87a2c"/>
+      <stop offset="100%" stop-color="#c5621e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="200" fill="url(#bgC)"/>
+
+  <!-- Dotted flight path -->
+  <path d="M 50 160 Q 200 60, 360 100 T 540 70"
+        stroke="#c5621e" stroke-width="2" stroke-dasharray="4,6"
+        stroke-opacity="0.55" fill="none"/>
+
+  <!-- Origin dot -->
+  <circle cx="50" cy="160" r="6" fill="#c5621e" stroke="#161311" stroke-width="1.5"/>
+
+  <!-- Paper plane (around the end of the path) -->
+  <g transform="translate(485 50) rotate(-20)">
+    <!-- main triangular body -->
+    <polygon points="0,30 90,0 90,15 30,30 90,30 90,45 0,30"
+             fill="url(#planeG)" stroke="#161311" stroke-width="2"
+             stroke-linejoin="round"/>
+    <!-- center fold shadow -->
+    <polygon points="30,30 90,15 90,30" fill="#161311" opacity="0.18"/>
+  </g>
+
+  <!-- "Hi" speech bubble at origin -->
+  <g transform="translate(20 110)">
+    <rect x="0" y="0" width="60" height="32" rx="6"
+          fill="#ffffff" stroke="#c5621e" stroke-width="1.6"/>
+    <polygon points="14,32 22,42 28,32" fill="#ffffff" stroke="#c5621e" stroke-width="1.6"/>
+    <text x="30" y="22" text-anchor="middle"
+          font-family="Georgia,serif" font-size="14" font-style="italic"
+          fill="#161311">Hi!</text>
+  </g>
+</svg>
